@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            animation: fadeIn 2s ease-in-out;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            line-height: 1.6;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            animation: slideIn 2s ease-out;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin-top: 1em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4ca1af;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #4ca1af;
+            text-align: center;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+            color: #ff6347; /* Attractive color */
+            animation: fadeIn 3s ease-in-out;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Akkineni Charan Sai</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Charan_Resume.pdf">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section style="text-align: center; "></section>
+            <h2 style="text-align: center;">Welcome to My Portfolio</h2>
+            <br/>
+
+            <p >Hello! My name is Akkineni Charan Sai, and I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. I have experience in various web technologies including HTML, CSS, JavaScript, and more. Feel free to explore my projects and get to know more about my work.</p>
+        </section>
+    </main>
+</body>
+</html>

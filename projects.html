@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            animation: fadeIn 2s ease-in-out;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            animation: slideIn 2s ease-out;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .project {
+            background-color: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4ca1af;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: #4ca1af; animation: slideIn 2s ease-out, pulse 2s infinite; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">My Projects</h1>
+    </header>
+    <main>
+        <section class="project fade-in" style="background-color: #ecf0f1; animation: fadeIn 2s ease-in-out; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);">
+            <h2 class="title">Prediction of Cardio-Vascular Risk Factor based on Retinal Fundus Photography and ECG Signal Using Deep Learning</h2>
+            <p style="color: #34495e;">Developed a deep learning model to predict cardiovascular risk factors by integrating retinal fundus photography and ECG signals, achieving high accuracy in risk assessment.</p>
+            <p style="color: #34495e;">Utilized Convolutional Neural Networks (CNN) for image analysis and Recurrent Neural Networks (RNNs) for ECG signal processing, resulting in high prediction accuracy.</p>
+        </section>
+        <section class="project fade-in" style="background-color: #ecf0f1; animation: fadeIn 2s ease-in-out; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);">
+            <h2 class="title">Metro Console Based Project | Java</h2>
+            <p style="color: #34495e;">Developed a console-based Metro Management System in Java utilizing Object-Oriented Programming (OOP) concepts such as inheritance, polymorphism, encapsulation, and abstraction.</p>
+            <p style="color: #34495e;">Implemented user-centric features including ticket booking, fare calculation, and station navigation for seamless functionality.</p>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: #ecf0f1; animation: fadeIn 2s ease-in-out;">Home</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
