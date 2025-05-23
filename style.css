@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp { /* Keep for .intro */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer (if any) or content fills height */
+    background-color: #f8f9fa; 
+    color: #212529; 
+    font-family: 'Lato', sans-serif; 
+    line-height: 1.6; 
+    /* animation: fadeIn 1s ease-in-out; Consider if this is too much on every page */
+}
+
+header {
+    background-color: #34495e; 
+    color: #ffffff; 
+    padding: 1.5em 1em; /* Adjusted padding for some horizontal space */
+    text-align: center;
+    animation: slideIn 1s ease-out; /* Shortened animation */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Added subtle shadow to header */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; 
+    margin-top: 0; 
+    font-weight: 700; 
+}
+
+h1 { /* Site Title in Header */
+    font-size: 2.2em; 
+    color: inherit; 
+    margin-bottom: 0.25em; 
+}
+
+h2 { /* Page Titles */
+    font-size: 2em;
+    color: #343a40; 
+    margin-bottom: 1rem; 
+}
+
+h3 { /* Section Titles / Project Titles */
+    font-size: 1.75em;
+    color: #343a40;
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    font-size: 1.25em;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 1em;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 0.5em; 
+}
+
+nav ul li a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 1.1em; 
+    font-weight: 400; 
+    transition: color 0.3s ease; 
+    padding: 0.25em 0; /* Add some padding for easier clicking */
+}
+
+nav ul li a:hover, nav ul li a.active { 
+    color: #007bff; 
+}
+
+/* General link styles */
+a {
+    color: #007bff; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: #0056b3; 
+    text-decoration: underline; 
+}
+
+main {
+    flex: 1; 
+    max-width: 960px;
+    width: 100%; 
+    margin: 2em auto; 
+    padding: 2em; 
+    box-sizing: border-box; 
+}
+
+section { /* General section styling */
+    max-width: 100%; 
+    margin: 0 0 2em 0; 
+    padding: 2em; 
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    box-sizing: border-box;
+}
+
+section:last-child {
+    margin-bottom: 0; 
+}
+
+p {
+    line-height: 1.7; 
+    color: #212529; 
+    text-align: left; 
+    margin-bottom: 1.25rem; 
+}
+
+/* Utility class for text that needs to be centered */
+.text-center {
+    text-align: center;
+}
+
+/* Project specific styles */
+.project { 
+    margin-bottom: 2em; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.project:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+}
+
+.project p {
+    color: #495057; 
+    font-size: 0.95em; 
+}
+
+/* Contact page specific styles */
+.contact-container { 
+    background-color: #ffffff; 
+    padding: 2.5em; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    text-align: center; 
+    max-width: 600px; 
+    width: 100%;
+    margin: 0 auto; 
+    animation: fadeIn 1s ease-in-out; 
+}
+
+.contact-container h3 { 
+    color: #343a40; 
+    margin-bottom: 1.5rem; 
+}
+
+.contact-container p {
+    color: #495057; 
+    text-align: center; 
+    margin: 1rem 0; 
+}
+
+.contact-container a {
+    color: #007bff; 
+    font-weight: normal; 
+}
+.contact-container a:hover {
+    color: #0056b3; 
+    text-decoration: underline; 
+}
+
+/* About page specific styles */
+.intro { 
+    font-size: 1.1em; 
+    line-height: 1.8; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s ease-out 0.5s forwards; 
+}
+
+
+/* Responsive Design */
+
+/* Medium screens (tablets, smaller desktops) */
+@media (max-width: 992px) {
+    main {
+        padding: 2em 1.5em; /* Slightly reduce horizontal padding */
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    header h1 { /* Site Title */
+        font-size: 2em; 
+    }
+    h2 { /* Page Titles */
+        font-size: 1.8em;
+    }
+    h3 { /* Section/Project Titles */
+        font-size: 1.6em;
+    }
+    nav ul {
+        gap: 1.5em; /* Reduce gap between nav items */
+    }
+    nav ul li a {
+        font-size: 1em; /* Slightly smaller nav links */
+    }
+}
+
+/* Small screens (tablets in portrait, large phones) */
+@media (max-width: 768px) {
+    header {
+        padding: 1em; /* Reduce header padding */
+    }
+    header h1 { /* Site Title */
+        font-size: 1.8em; 
+        margin-bottom: 0.5em; /* Add some space if nav stacks */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center; 
+        gap: 0.5em; /* Reduce gap for stacked items */
+        margin-top: 0.75em;
+    }
+    nav ul li {
+        margin-bottom: 0.5em; 
+        width: 100%; /* Make nav items take full width for easier tapping */
+    }
+    nav ul li a {
+        display: block; /* Make link itself block for full width tap target */
+        padding: 0.5em 0; /* Adjust padding for stacked items */
+    }
+
+    main {
+        padding: 1.5em 1em; 
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    section, 
+    .project, 
+    .contact-container { /* Apply to .project and .contact-container as well */
+        padding: 1.5em; 
+    }
+    h2 { /* Page Titles */
+        font-size: 1.6em;
+    }
+    h3 { /* Section/Project Titles */
+        font-size: 1.4em;
+    }
+    .intro {
+        font-size: 1em;
+        line-height: 1.7;
+    }
+    .contact-container {
+        padding: 2em 1.5em;
+    }
+
+    /* Welcome heading on index page - needs to be handled in index.html or with !important if too specific there.
+       This is a general attempt. The 'top' value might need more specific adjustment. */
+    .welcome-heading {
+        font-size: 2em !important; /* Example if it's highly specific in index.html */
+        /* top: 30% !important; Consider adjusting top if it's set inline/specifically */
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
+    header {
+        padding: 1em 0.75em;
+    }
+    header h1 { /* Site Title */
+        font-size: 1.6em; 
+    }
+    nav ul li a {
+        font-size: 1em; /* Ensure it's not too small */
+    }
+    main {
+        padding: 1em 0.75em; 
+        margin-top: 1em; 
+        margin-bottom: 1em;
+    }
+    section, 
+    .project, 
+    .contact-container {
+        padding: 1em; 
+    }
+    h2 { /* Page Titles */
+        font-size: 1.4em;
+    }
+    h3 { /* Section/Project Titles */
+        font-size: 1.2em;
+    }
+    p, .project p { /* General paragraph and project paragraph text */
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+    .contact-container {
+        padding: 1.5em 1em;
+        max-width: 95%; /* Ensure it fits well */
+    }
+    .contact-container p {
+        margin: 0.75rem 0;
+    }
+    .intro {
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+     /* Welcome heading on index page */
+    .welcome-heading {
+        font-size: 1.8em !important; /* Further reduce */
+        /* top: 25% !important; /* Adjust top if needed */
+    }
+}

@@ -4,112 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        @keyframes slideIn {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+        /* Specific styles for index.html */
+        /* nav and ul styles for header are now covered by style.css */
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
-            animation: fadeIn 2s ease-in-out;
-            font-family: 'Arial', sans-serif;
-            color: white;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 2em;
+        /* Specific h2 for the welcome message on index.html */
+        .welcome-heading {
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 2.5em; 
             text-align: center;
-            animation: fadeIn 3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        p {
-            line-height: 1.6;
-            color: white;
-            text-align: center;
-        }
-
-        header {
-            background-color: #34495e;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-            animation: slideIn 2s ease-out;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav {
-            margin-top: 1em;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 2em;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #4ca1af;
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        h2 {
-            font-size: 2.5em;
-            color: #4ca1af;
-            text-align: center;
-            margin-bottom: 0.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 25%;
+            /* margin-bottom: 0.5em; Adjusted to be part of the absolute positioning logic */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Softened shadow */
+            position: absolute; 
+            width: 100%; /* Ensure it takes width for centering text */
+            top: 40%; /* Adjusted for better visual centering with main content area */
             left: 50%;
-            transform: translate(-50%, -25%);
-            color: #ff6347; /* Attractive color */
-            animation: fadeIn 3s ease-in-out;
-            font-weight: bold;
+            transform: translate(-50%, -50%); /* Centering based on its own dimensions */
+            color: #343a40; 
+            animation: fadeIn 1.5s ease-in-out; /* Shortened animation */
+            font-weight: 700; /* Already set in h2 general styles, but can be explicit */
+            padding: 0 1em; /* Add padding if text is too close to edges on small screens */
+            box-sizing: border-box;
+        }
+        /* Add a placeholder for the absolutely positioned welcome-heading if needed,
+           or ensure the section below it has enough top padding/margin.
+           Given the main has padding, and section is after, it might be okay.
+           Alternatively, make the section itself have a min-height or significant top padding.
+        */
+        .main-section-index {
+            padding-top: 10vh; /* Add padding to push content below the absolute positioned h2 */
+            /* The value might need adjustment depending on the h2's final size and position */
         }
     </style>
 </head>
@@ -118,6 +43,7 @@
         <h1>Akkineni Charan Sai</h1>
         <nav>
             <ul>
+                <li><a href="index.html" class="active">Home</a></li> <!-- Added active class for demo -->
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -126,11 +52,12 @@
         </nav>
     </header>
     <main>
-        <section style="text-align: center; "></section>
-            <h2 style="text-align: center;">Welcome to My Portfolio</h2>
-            <br/>
-
-            <p >Hello! My name is Akkineni Charan Sai, and I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. I have experience in various web technologies including HTML, CSS, JavaScript, and more. Feel free to explore my projects and get to know more about my work.</p>
+        <!-- The section will use general section styling from style.css -->
+        <section class="main-section-index">
+            <h2 class="welcome-heading">Welcome to My Portfolio</h2>
+            <!-- Removed <br/>, spacing will be handled by margins or structure -->
+            <p class="text-center" style="margin-top: 20vh;"> <!-- Added inline margin-top to push this p down -->
+            Hello! My name is Akkineni Charan Sai, and I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. I have experience in various web technologies including HTML, CSS, JavaScript, and more. Feel free to explore my projects and get to know more about my work.</p>
         </section>
     </main>
 </body>
